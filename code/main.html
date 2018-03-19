@@ -1,0 +1,58 @@
+<!--<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">开饭啦</a>
+            <a href="" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+    </div>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+                <div class="navbar-header">
+                    <a href="" class="navbar-brand">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </a>
+                    <a href="" class="navbar-brand">
+                        <span class="glyphicon glyphicon-user span" aria-hidden="true"></span>
+                    </a>
+                    <a href="" class="navbar-brand">
+                        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                    </a>
+                </div>
+        </div>
+    </div>
+</div>-->
+<div ng-include="'code/header.html'"></div>
+<div class="container">
+    <form  class="form-horizontal">
+        <div class="form-group has-feedback search">
+            <div class="col-xs-12">
+                <input class="form-control" type="text" placeholder="搜索菜品名称和原料……" ng-model="kw"/>
+                <span class=" glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+        </div>
+    </form>
+    <div class="list-group">
+            <a href="#/detail/{{obj.did}}" class="list-group-item" ng-repeat="obj in list">
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" ng-src="{{obj.img_sm}}" alt=""/>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{obj.name}}</h3>
+                        {{obj.material}}
+                        <hr/>
+                        <span>￥{{obj.price}}</span>
+                    </div>
+                </div>
+            </a>
+    </div>
+    <a href="" class="btn btn-success btn-block" ng-click="loadMore()" ng-show="hasMore">加载更多</a>
+    <div class="alert alert-info" role="alert" ng-hide="hasMore">
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        没有更多数据了！
+    </div>
+</div>

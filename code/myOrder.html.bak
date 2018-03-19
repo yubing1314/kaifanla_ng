@@ -1,0 +1,26 @@
+<div ng-include="'code/header.html'"></div>
+<div class="container">
+    <h2 class="text-center">我的订单</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr >
+                        <th class="text-center">编号</th>
+                        <th class="text-center">菜品</th>
+                        <th class="text-center">下单时间</th>
+                        <th class="text-center">联系人</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="order in orderList | orderBy:'oid':true " class="text-center">
+                        <td>{{order.oid}}</td>
+                        <td><img ng-src="{{order.img_sm}}" alt=""/></td>
+                        <td>{{order.order_time | date:"yyyy-MM-dd"}}</td>
+                        <td>{{order.user_name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

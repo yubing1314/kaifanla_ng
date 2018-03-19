@@ -1,0 +1,46 @@
+body{
+    margin: 0 0 60px 0;
+}
+.a{
+    margin-top: 200px;
+}
+.a>a:hover{
+    text-decoration: none;
+}
+.a h1{
+    font-size: 10em;
+}
+.media-body span{
+    color: red;
+    font-weight: 700;
+}
+hr{
+    margin: 10px 0;
+}
+.navbar-footer-menu{
+    list-style: none;
+    margin:0;
+    padding:0
+}
+.navbar-footer-menu li{
+    display: inline-block;
+    line-height: 50px;
+    width: 30%;
+    text-align: center;
+}
+.navbar-footer-menu li a{
+    color:#777;
+    font-size: 1.5em;
+}
+.panel-heading span{
+    color: red;
+    font-weight: 700;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td{
+    vertical-align: middle;
+}
